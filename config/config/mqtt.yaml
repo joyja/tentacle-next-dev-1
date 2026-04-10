@@ -4,7 +4,7 @@ metadata:
   name: mqtt
 spec:
   values:
-    MQTT_BROKER_URL: mqtt://mantle-dev:1883
+    MQTT_BROKER_URL: tcp://mantle-dev:1883
     MQTT_CLIENT_ID: tentacle-next-dev-1
     MQTT_DEVICE_ID: ""
     MQTT_EDGE_NODE: tentacle-next-dev-1-node
