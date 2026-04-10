@@ -1,0 +1,273 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Gateway
+metadata:
+  name: gateway
+spec:
+  devices:
+    rtu45:
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
+      host: client4
+      protocol: ethernetip
+      scanRate: 2500
+      templateNameOverrides:
+        AB: rtu45_AB
+    rtu60:
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
+      host: client60
+      protocol: ethernetip
+      scanRate: 2500
+      templateNameOverrides:
+        AB: rtu60_AB
+    test-switch:
+      community: public
+      deadband:
+        maxTime: 2500
+        minTime: 2500
+        value: 1
+      host: 192.168.82.55
+      protocol: snmp
+      scanRate: 2500
+      version: 2c
+  udtTemplates:
+    Analog_Input:
+      name: Analog_Input
+      members:
+        - name: EnableIn
+          datatype: boolean
+        - name: EnableOut
+          datatype: boolean
+        - name: AI
+          datatype: number
+        - name: SIGNALFAIL
+          datatype: boolean
+        - name: OVERRANGE
+          datatype: boolean
+        - name: UNDERRANGE
+          datatype: boolean
+        - name: SIMULATE
+          datatype: boolean
+        - name: RAWMIN
+          datatype: number
+        - name: RAWMAX
+          datatype: number
+        - name: LOWSCL
+          datatype: number
+        - name: HIGHSCL
+          datatype: number
+        - name: SIMVALUE
+          datatype: number
+        - name: ALMENB
+          datatype: boolean
+        - name: HHENB
+          datatype: boolean
+        - name: HHSP
+          datatype: number
+        - name: HENB
+          datatype: boolean
+        - name: HSP
+          datatype: number
+        - name: LENB
+          datatype: boolean
+        - name: LSP
+          datatype: number
+        - name: LLENB
+          datatype: boolean
+        - name: LLSP
+          datatype: number
+        - name: LOLENB
+          datatype: boolean
+        - name: LOLSP
+          datatype: number
+        - name: ALMDLY
+          datatype: number
+        - name: DB
+          datatype: number
+        - name: VALUE
+          datatype: number
+        - name: HH
+          datatype: boolean
+        - name: H
+          datatype: boolean
+        - name: L
+          datatype: boolean
+        - name: LL
+          datatype: boolean
+        - name: LOS
+          datatype: boolean
+        - name: OOR
+          datatype: boolean
+        - name: los_oneshot
+          datatype: boolean
+        - name: oor_oneshot
+          datatype: boolean
+      version: "1.0"
+    Get_TOD:
+      name: Get_TOD
+      members:
+        - name: EnableIn
+          datatype: boolean
+        - name: EnableOut
+          datatype: boolean
+        - name: MONTH
+          datatype: number
+        - name: DAY
+          datatype: number
+        - name: YEAR
+          datatype: number
+        - name: HOUR
+          datatype: number
+        - name: MINUTE
+          datatype: number
+        - name: SECOND
+          datatype: number
+        - name: New_Day
+          datatype: boolean
+        - name: New_Month
+          datatype: boolean
+        - name: gettime
+          datatype: number
+      version: "1.0"
+  udtVariables:
+    RTU45_RECLM_PIT_001:
+      deviceId: rtu45
+      id: RTU45_RECLM_PIT_001
+      memberCipTypes:
+        AI: REAL
+        ALMDLY: INT
+        ALMENB: BOOL
+        DB: REAL
+        EnableIn: BOOL
+        EnableOut: BOOL
+        H: BOOL
+        HENB: BOOL
+        HH: BOOL
+        HHENB: BOOL
+        HHSP: REAL
+        HIGHSCL: REAL
+        HSP: REAL
+        L: BOOL
+        LENB: BOOL
+        LL: BOOL
+        LLENB: BOOL
+        LLSP: REAL
+        LOLENB: BOOL
+        LOLSP: REAL
+        LOS: BOOL
+        LOWSCL: REAL
+        LSP: REAL
+        OOR: BOOL
+        OVERRANGE: BOOL
+        RAWMAX: REAL
+        RAWMIN: REAL
+        SIGNALFAIL: BOOL
+        SIMULATE: BOOL
+        SIMVALUE: REAL
+        UNDERRANGE: BOOL
+        VALUE: REAL
+        los_oneshot: BOOL
+        oor_oneshot: BOOL
+      memberTags:
+        AI: RTU45_RECLM_PIT_001.AI
+        ALMDLY: RTU45_RECLM_PIT_001.ALMDLY
+        ALMENB: RTU45_RECLM_PIT_001.ALMENB
+        DB: RTU45_RECLM_PIT_001.DB
+        EnableIn: RTU45_RECLM_PIT_001.EnableIn
+        EnableOut: RTU45_RECLM_PIT_001.EnableOut
+        H: RTU45_RECLM_PIT_001.H
+        HENB: RTU45_RECLM_PIT_001.HENB
+        HH: RTU45_RECLM_PIT_001.HH
+        HHENB: RTU45_RECLM_PIT_001.HHENB
+        HHSP: RTU45_RECLM_PIT_001.HHSP
+        HIGHSCL: RTU45_RECLM_PIT_001.HIGHSCL
+        HSP: RTU45_RECLM_PIT_001.HSP
+        L: RTU45_RECLM_PIT_001.L
+        LENB: RTU45_RECLM_PIT_001.LENB
+        LL: RTU45_RECLM_PIT_001.LL
+        LLENB: RTU45_RECLM_PIT_001.LLENB
+        LLSP: RTU45_RECLM_PIT_001.LLSP
+        LOLENB: RTU45_RECLM_PIT_001.LOLENB
+        LOLSP: RTU45_RECLM_PIT_001.LOLSP
+        LOS: RTU45_RECLM_PIT_001.LOS
+        LOWSCL: RTU45_RECLM_PIT_001.LOWSCL
+        LSP: RTU45_RECLM_PIT_001.LSP
+        OOR: RTU45_RECLM_PIT_001.OOR
+        OVERRANGE: RTU45_RECLM_PIT_001.OVERRANGE
+        RAWMAX: RTU45_RECLM_PIT_001.RAWMAX
+        RAWMIN: RTU45_RECLM_PIT_001.RAWMIN
+        SIGNALFAIL: RTU45_RECLM_PIT_001.SIGNALFAIL
+        SIMULATE: RTU45_RECLM_PIT_001.SIMULATE
+        SIMVALUE: RTU45_RECLM_PIT_001.SIMVALUE
+        UNDERRANGE: RTU45_RECLM_PIT_001.UNDERRANGE
+        VALUE: RTU45_RECLM_PIT_001.VALUE
+        los_oneshot: RTU45_RECLM_PIT_001.los_oneshot
+        oor_oneshot: RTU45_RECLM_PIT_001.oor_oneshot
+      tag: RTU45_RECLM_PIT_001
+      templateName: Analog_Input
+    RTU45_RECLM_PLC_TOD:
+      deviceId: rtu45
+      id: RTU45_RECLM_PLC_TOD
+      memberCipTypes:
+        DAY: DINT
+        EnableIn: BOOL
+        EnableOut: BOOL
+        HOUR: DINT
+        MINUTE: DINT
+        MONTH: DINT
+        New_Day: BOOL
+        New_Month: BOOL
+        SECOND: DINT
+        YEAR: DINT
+        gettime: DINT
+      memberTags:
+        DAY: RTU45_RECLM_PLC_TOD.DAY
+        EnableIn: RTU45_RECLM_PLC_TOD.EnableIn
+        EnableOut: RTU45_RECLM_PLC_TOD.EnableOut
+        HOUR: RTU45_RECLM_PLC_TOD.HOUR
+        MINUTE: RTU45_RECLM_PLC_TOD.MINUTE
+        MONTH: RTU45_RECLM_PLC_TOD.MONTH
+        New_Day: RTU45_RECLM_PLC_TOD.New_Day
+        New_Month: RTU45_RECLM_PLC_TOD.New_Month
+        SECOND: RTU45_RECLM_PLC_TOD.SECOND
+        YEAR: RTU45_RECLM_PLC_TOD.YEAR
+        gettime: RTU45_RECLM_PLC_TOD.gettime
+      tag: RTU45_RECLM_PLC_TOD
+      templateName: Get_TOD
+  variables:
+    RTU45_RECLM_ACP_001_YA:
+      cipType: BOOL
+      datatype: boolean
+      default: false
+      deviceId: rtu45
+      id: RTU45_RECLM_ACP_001_YA
+      tag: RTU45_RECLM_ACP_001_YA
+    RTU45_RECLM_PIT_001_PI:
+      cipType: INT
+      datatype: number
+      deadband:
+        value: 10
+      default: 0
+      deviceId: rtu45
+      id: RTU45_RECLM_PIT_001_PI
+      tag: RTU45_RECLM_PIT_001_PI
+    RTU60_ZONE13_PIT_001_PI:
+      cipType: INT
+      datatype: number
+      deadband:
+        value: 10
+      default: 0
+      deviceId: rtu60
+      id: RTU60_ZONE13_PIT_001_PI
+      tag: RTU60_ZONE13_PIT_001_PI
+    dot1dBaseNumPorts.0:
+      cipType: Integer32
+      datatype: number
+      default: 0
+      deviceId: test-switch
+      id: dot1dBaseNumPorts.0
+      tag: .1.3.6.1.2.1.17.1.2.0

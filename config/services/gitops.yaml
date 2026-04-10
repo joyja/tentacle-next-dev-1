@@ -1,0 +1,8 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Service
+metadata:
+  name: gitops
+spec:
+  enabled: true
+  running: true
+  version: latest

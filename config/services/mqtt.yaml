@@ -1,0 +1,8 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Service
+metadata:
+  name: mqtt
+spec:
+  enabled: true
+  running: true
+  version: latest
