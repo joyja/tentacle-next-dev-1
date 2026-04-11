@@ -417,6 +417,12 @@ spec:
       deviceId: mqtt
       id: connected
       tag: connected
+    deviceCount:
+      datatype: number
+      default: 0
+      deviceId: gateway
+      id: deviceCount
+      tag: deviceCount
     dot1dBaseNumPorts.0:
       cipType: Integer32
       datatype: number
@@ -436,9 +442,21 @@ spec:
       deviceId: mqtt
       id: storeForward
       tag: storeForward
+    udtVariableCount:
+      datatype: number
+      default: 0
+      deviceId: gateway
+      id: udtVariableCount
+      tag: udtVariableCount
     uptime:
       datatype: number
       default: 0
       deviceId: mqtt
       id: uptime
       tag: uptime
+    variableCount:
+      datatype: number
+      default: 0
+      deviceId: gateway
+      id: variableCount
+      tag: variableCount
