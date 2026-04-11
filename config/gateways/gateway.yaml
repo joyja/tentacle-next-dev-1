@@ -451,7 +451,7 @@ spec:
     uptime:
       datatype: number
       default: 0
-      deviceId: mqtt
+      deviceId: gateway
       id: uptime
       tag: uptime
     variableCount:
