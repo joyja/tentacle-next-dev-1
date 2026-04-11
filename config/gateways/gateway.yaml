@@ -4,13 +4,7 @@ metadata:
   name: gateway
 spec:
   devices:
-    eno1:
-      protocol: network
-    eno2:
-      protocol: network
-    eth0:
-      protocol: network
-    lo:
+    network:
       protocol: network
     rtu45:
       deadband:
@@ -32,8 +26,6 @@ spec:
       scanRate: 2500
       templateNameOverrides:
         AB: rtu60_AB
-    tailscale0:
-      protocol: network
     test-switch:
       community: public
       deadband:
@@ -279,98 +271,98 @@ spec:
       tag: RTU45_RECLM_PLC_TOD
       templateName: Get_TOD
     eno1:
-      deviceId: eno1
+      deviceId: network
       id: eno1
       memberTags:
-        carrier: carrier
-        mac: mac
-        mtu: mtu
-        operstate: operstate
-        rxBytes: rxBytes
-        rxDropped: rxDropped
-        rxErrors: rxErrors
-        rxPackets: rxPackets
-        speed: speed
-        txBytes: txBytes
-        txDropped: txDropped
-        txErrors: txErrors
-        txPackets: txPackets
+        carrier: eno1_carrier
+        mac: eno1_mac
+        mtu: eno1_mtu
+        operstate: eno1_operstate
+        rxBytes: eno1_rxBytes
+        rxDropped: eno1_rxDropped
+        rxErrors: eno1_rxErrors
+        rxPackets: eno1_rxPackets
+        speed: eno1_speed
+        txBytes: eno1_txBytes
+        txDropped: eno1_txDropped
+        txErrors: eno1_txErrors
+        txPackets: eno1_txPackets
       tag: eno1
       templateName: NetworkInterface
     eno2:
-      deviceId: eno2
+      deviceId: network
       id: eno2
       memberTags:
-        carrier: carrier
-        mac: mac
-        mtu: mtu
-        operstate: operstate
-        rxBytes: rxBytes
-        rxDropped: rxDropped
-        rxErrors: rxErrors
-        rxPackets: rxPackets
-        speed: speed
-        txBytes: txBytes
-        txDropped: txDropped
-        txErrors: txErrors
-        txPackets: txPackets
+        carrier: eno2_carrier
+        mac: eno2_mac
+        mtu: eno2_mtu
+        operstate: eno2_operstate
+        rxBytes: eno2_rxBytes
+        rxDropped: eno2_rxDropped
+        rxErrors: eno2_rxErrors
+        rxPackets: eno2_rxPackets
+        speed: eno2_speed
+        txBytes: eno2_txBytes
+        txDropped: eno2_txDropped
+        txErrors: eno2_txErrors
+        txPackets: eno2_txPackets
       tag: eno2
       templateName: NetworkInterface
     eth0:
-      deviceId: eth0
+      deviceId: network
       id: eth0
       memberTags:
-        carrier: carrier
-        mac: mac
-        mtu: mtu
-        operstate: operstate
-        rxBytes: rxBytes
-        rxDropped: rxDropped
-        rxErrors: rxErrors
-        rxPackets: rxPackets
-        speed: speed
-        txBytes: txBytes
-        txDropped: txDropped
-        txErrors: txErrors
-        txPackets: txPackets
+        carrier: eth0_carrier
+        mac: eth0_mac
+        mtu: eth0_mtu
+        operstate: eth0_operstate
+        rxBytes: eth0_rxBytes
+        rxDropped: eth0_rxDropped
+        rxErrors: eth0_rxErrors
+        rxPackets: eth0_rxPackets
+        speed: eth0_speed
+        txBytes: eth0_txBytes
+        txDropped: eth0_txDropped
+        txErrors: eth0_txErrors
+        txPackets: eth0_txPackets
       tag: eth0
       templateName: NetworkInterface
     lo:
-      deviceId: lo
+      deviceId: network
       id: lo
       memberTags:
-        carrier: carrier
-        mac: mac
-        mtu: mtu
-        operstate: operstate
-        rxBytes: rxBytes
-        rxDropped: rxDropped
-        rxErrors: rxErrors
-        rxPackets: rxPackets
-        speed: speed
-        txBytes: txBytes
-        txDropped: txDropped
-        txErrors: txErrors
-        txPackets: txPackets
+        carrier: lo_carrier
+        mac: lo_mac
+        mtu: lo_mtu
+        operstate: lo_operstate
+        rxBytes: lo_rxBytes
+        rxDropped: lo_rxDropped
+        rxErrors: lo_rxErrors
+        rxPackets: lo_rxPackets
+        speed: lo_speed
+        txBytes: lo_txBytes
+        txDropped: lo_txDropped
+        txErrors: lo_txErrors
+        txPackets: lo_txPackets
       tag: lo
       templateName: NetworkInterface
     tailscale0:
-      deviceId: tailscale0
+      deviceId: network
       id: tailscale0
       memberTags:
-        carrier: carrier
-        mac: mac
-        mtu: mtu
-        operstate: operstate
-        rxBytes: rxBytes
-        rxDropped: rxDropped
-        rxErrors: rxErrors
-        rxPackets: rxPackets
-        speed: speed
-        txBytes: txBytes
-        txDropped: txDropped
-        txErrors: txErrors
-        txPackets: txPackets
+        carrier: tailscale0_carrier
+        mac: tailscale0_mac
+        mtu: tailscale0_mtu
+        operstate: tailscale0_operstate
+        rxBytes: tailscale0_rxBytes
+        rxDropped: tailscale0_rxDropped
+        rxErrors: tailscale0_rxErrors
+        rxPackets: tailscale0_rxPackets
+        speed: tailscale0_speed
+        txBytes: tailscale0_txBytes
+        txDropped: tailscale0_txDropped
+        txErrors: tailscale0_txErrors
+        txPackets: tailscale0_txPackets
       tag: tailscale0
       templateName: NetworkInterface
   variables:
