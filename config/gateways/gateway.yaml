@@ -5,21 +5,18 @@ metadata:
 spec:
   devices:
     gateway:
-      autoManaged: true
       deadband:
         maxTime: 30000
         minTime: 2500
         value: 1
       protocol: gateway
     mqtt:
-      autoManaged: true
       deadband:
         maxTime: 30000
         minTime: 2500
         value: 1
       protocol: mqtt
     network:
-      autoManaged: true
       deadband:
         maxTime: 3000
         minTime: 2500
