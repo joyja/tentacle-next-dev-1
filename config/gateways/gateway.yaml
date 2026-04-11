@@ -4,7 +4,14 @@ metadata:
   name: gateway
 spec:
   devices:
+    gateway:
+      autoManaged: true
+      protocol: gateway
+    mqtt:
+      autoManaged: true
+      protocol: mqtt
     network:
+      autoManaged: true
       deadband:
         maxTime: 3000
         minTime: 2500
@@ -403,3 +410,51 @@ spec:
       deviceId: test-switch
       id: dot1dBaseNumPorts.0
       tag: .1.3.6.1.2.1.17.1.2.0
+    gateway_deviceCount:
+      datatype: number
+      default: null
+      deviceId: gateway
+      id: gateway_deviceCount
+      tag: deviceCount
+    gateway_udtVariableCount:
+      datatype: number
+      default: null
+      deviceId: gateway
+      id: gateway_udtVariableCount
+      tag: udtVariableCount
+    gateway_uptime:
+      datatype: number
+      default: null
+      deviceId: gateway
+      id: gateway_uptime
+      tag: uptime
+    gateway_variableCount:
+      datatype: number
+      default: null
+      deviceId: gateway
+      id: gateway_variableCount
+      tag: variableCount
+    mqtt_connected:
+      datatype: boolean
+      default: null
+      deviceId: mqtt
+      id: mqtt_connected
+      tag: connected
+    mqtt_publishRate:
+      datatype: number
+      default: null
+      deviceId: mqtt
+      id: mqtt_publishRate
+      tag: publishRate
+    mqtt_storeForward:
+      datatype: boolean
+      default: null
+      deviceId: mqtt
+      id: mqtt_storeForward
+      tag: storeForward
+    mqtt_uptime:
+      datatype: number
+      default: null
+      deviceId: mqtt
+      id: mqtt_uptime
+      tag: uptime
