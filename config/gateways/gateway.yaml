@@ -5,7 +5,12 @@ metadata:
 spec:
   devices:
     network:
+      deadband:
+        maxTime: 3000
+        minTime: 2500
+        value: 1
       protocol: network
+      scanRate: 2500
     rtu45:
       deadband:
         maxTime: 30000
