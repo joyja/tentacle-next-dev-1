@@ -4,6 +4,14 @@ metadata:
   name: gateway
 spec:
   devices:
+    eno1:
+      protocol: network
+    eno2:
+      protocol: network
+    eth0:
+      protocol: network
+    lo:
+      protocol: network
     rtu45:
       deadband:
         maxTime: 30000
@@ -24,6 +32,8 @@ spec:
       scanRate: 2500
       templateNameOverrides:
         AB: rtu60_AB
+    tailscale0:
+      protocol: network
     test-switch:
       community: public
       deadband:
@@ -133,6 +143,36 @@ spec:
         - name: gettime
           datatype: number
       version: "1.0"
+    NetworkInterface:
+      name: NetworkInterface
+      members:
+        - name: operstate
+          datatype: string
+        - name: carrier
+          datatype: boolean
+        - name: speed
+          datatype: number
+        - name: mtu
+          datatype: number
+        - name: mac
+          datatype: string
+        - name: rxBytes
+          datatype: number
+        - name: txBytes
+          datatype: number
+        - name: rxPackets
+          datatype: number
+        - name: txPackets
+          datatype: number
+        - name: rxErrors
+          datatype: number
+        - name: txErrors
+          datatype: number
+        - name: rxDropped
+          datatype: number
+        - name: txDropped
+          datatype: number
+      version: "1.0"
   udtVariables:
     RTU45_RECLM_PIT_001:
       deviceId: rtu45
@@ -238,6 +278,101 @@ spec:
         gettime: RTU45_RECLM_PLC_TOD.gettime
       tag: RTU45_RECLM_PLC_TOD
       templateName: Get_TOD
+    eno1:
+      deviceId: eno1
+      id: eno1
+      memberTags:
+        carrier: carrier
+        mac: mac
+        mtu: mtu
+        operstate: operstate
+        rxBytes: rxBytes
+        rxDropped: rxDropped
+        rxErrors: rxErrors
+        rxPackets: rxPackets
+        speed: speed
+        txBytes: txBytes
+        txDropped: txDropped
+        txErrors: txErrors
+        txPackets: txPackets
+      tag: eno1
+      templateName: NetworkInterface
+    eno2:
+      deviceId: eno2
+      id: eno2
+      memberTags:
+        carrier: carrier
+        mac: mac
+        mtu: mtu
+        operstate: operstate
+        rxBytes: rxBytes
+        rxDropped: rxDropped
+        rxErrors: rxErrors
+        rxPackets: rxPackets
+        speed: speed
+        txBytes: txBytes
+        txDropped: txDropped
+        txErrors: txErrors
+        txPackets: txPackets
+      tag: eno2
+      templateName: NetworkInterface
+    eth0:
+      deviceId: eth0
+      id: eth0
+      memberTags:
+        carrier: carrier
+        mac: mac
+        mtu: mtu
+        operstate: operstate
+        rxBytes: rxBytes
+        rxDropped: rxDropped
+        rxErrors: rxErrors
+        rxPackets: rxPackets
+        speed: speed
+        txBytes: txBytes
+        txDropped: txDropped
+        txErrors: txErrors
+        txPackets: txPackets
+      tag: eth0
+      templateName: NetworkInterface
+    lo:
+      deviceId: lo
+      id: lo
+      memberTags:
+        carrier: carrier
+        mac: mac
+        mtu: mtu
+        operstate: operstate
+        rxBytes: rxBytes
+        rxDropped: rxDropped
+        rxErrors: rxErrors
+        rxPackets: rxPackets
+        speed: speed
+        txBytes: txBytes
+        txDropped: txDropped
+        txErrors: txErrors
+        txPackets: txPackets
+      tag: lo
+      templateName: NetworkInterface
+    tailscale0:
+      deviceId: tailscale0
+      id: tailscale0
+      memberTags:
+        carrier: carrier
+        mac: mac
+        mtu: mtu
+        operstate: operstate
+        rxBytes: rxBytes
+        rxDropped: rxDropped
+        rxErrors: rxErrors
+        rxPackets: rxPackets
+        speed: speed
+        txBytes: txBytes
+        txDropped: txDropped
+        txErrors: txErrors
+        txPackets: txPackets
+      tag: tailscale0
+      templateName: NetworkInterface
   variables:
     RTU45_RECLM_ACP_001_YA:
       cipType: BOOL
