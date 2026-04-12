@@ -3,5 +3,6 @@ kind: Service
 metadata:
   name: profinet
 spec:
+  enabled: true
   running: true
   version: latest
