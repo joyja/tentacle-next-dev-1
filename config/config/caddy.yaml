@@ -1,0 +1,10 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: ModuleConfig
+metadata:
+  name: caddy
+spec:
+  values:
+    CADDY_ADVANCED_MODE: "false"
+    CADDY_CADDYFILE: ""
+    CADDY_DOMAIN: :80
+    CADDY_UPSTREAM_PORT: "4000"
