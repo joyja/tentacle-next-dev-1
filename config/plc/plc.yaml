@@ -1,0 +1,8 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: Plc
+metadata:
+  name: plc
+spec:
+  devices: {}
+  tasks: {}
+  variables: {}
