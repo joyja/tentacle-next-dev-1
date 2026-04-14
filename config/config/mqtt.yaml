@@ -4,7 +4,7 @@ metadata:
   name: mqtt
 spec:
   values:
-    MQTT_BROKER_URL: tcp://mantle-dev:1883
+    MQTT_BROKER_URL: tcp://mantle-dev.tail913f1.ts.net:1883
     MQTT_CLIENT_ID: tentacle-mqtt
     MQTT_EDGE_NODE: EdgeNode1
     MQTT_GROUP_ID: TentacleGroup
