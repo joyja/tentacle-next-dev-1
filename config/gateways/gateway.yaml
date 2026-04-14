@@ -12,7 +12,7 @@ spec:
       host: client4
       protocol: ethernetip
       scanRate: 2500
-      slot: 1
+      slot: 0
     gateway:
       autoManaged: true
       protocol: gateway
