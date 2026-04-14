@@ -15,6 +15,10 @@ spec:
       slot: 0
     gateway:
       autoManaged: true
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
       protocol: gateway
     mqtt:
       autoManaged: true
