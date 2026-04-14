@@ -144,4 +144,11 @@ spec:
         txPackets: tailscale0_txPackets
       tag: tailscale0
       templateName: NetworkInterface
-  variables: {}
+  variables:
+    client4/RTU45_RECLM_PIT_001_PI:
+      cipType: INT
+      datatype: number
+      default: 0
+      deviceId: client4
+      id: client4/RTU45_RECLM_PIT_001_PI
+      tag: RTU45_RECLM_PIT_001_PI
