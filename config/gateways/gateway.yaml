@@ -12,8 +12,13 @@ spec:
         value: 1
       protocol: gateway
     ignition:
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
       endpointUrl: opc.tcp://ignition:4840
       protocol: opcua
+      scanRate: 2500
     mqtt:
       autoManaged: true
       deadband:
