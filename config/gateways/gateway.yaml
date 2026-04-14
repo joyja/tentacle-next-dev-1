@@ -25,6 +25,10 @@ spec:
       protocol: mqtt
     network:
       autoManaged: true
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
       protocol: network
   udtTemplates:
     NetworkInterface:
