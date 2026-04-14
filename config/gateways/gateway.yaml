@@ -4,6 +4,10 @@ metadata:
   name: gateway
 spec:
   devices:
+    client4:
+      host: client4
+      protocol: ethernetip
+      slot: 0
     gateway:
       autoManaged: true
       protocol: gateway
