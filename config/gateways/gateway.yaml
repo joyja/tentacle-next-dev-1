@@ -5,8 +5,13 @@ metadata:
 spec:
   devices:
     client4:
+      deadband:
+        maxTime: 30000
+        minTime: 2500
+        value: 1
       host: client4
       protocol: ethernetip
+      scanRate: 2500
       slot: 0
     gateway:
       autoManaged: true
