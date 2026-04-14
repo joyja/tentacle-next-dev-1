@@ -11,6 +11,9 @@ spec:
         minTime: 2500
         value: 1
       protocol: gateway
+    ignition:
+      endpointUrl: opc.tcp://ignition:4840
+      protocol: opcua
     mqtt:
       autoManaged: true
       deadband:
