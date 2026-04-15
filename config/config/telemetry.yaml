@@ -1,0 +1,7 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: ModuleConfig
+metadata:
+  name: telemetry
+spec:
+  values:
+    TELEMETRY_ENABLED: "true"
