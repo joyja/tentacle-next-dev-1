@@ -4,4 +4,8 @@ metadata:
   name: telemetry
 spec:
   values:
+    TELEMETRY_API_KEY: c71a01c68f9d3c0fca4e5c44bf8d16872706cabafda00aa47571f9cbe54d7e61
     TELEMETRY_ENABLED: "true"
+    TELEMETRY_ENDPOINT: https://telemetry.joyautomation.com
+    TELEMETRY_ERRORS_ENABLED: "true"
+    TELEMETRY_INTERVAL: "3600"
