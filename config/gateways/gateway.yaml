@@ -217,6 +217,25 @@ spec:
         oor_oneshot: RTU45_RECLM_PIT_001.oor_oneshot
       tag: RTU45_RECLM_PIT_001
       templateName: Analog_Input
+    bonding_masters:
+      deviceId: network
+      id: bonding_masters
+      memberTags:
+        carrier: bonding_masters_carrier
+        mac: bonding_masters_mac
+        mtu: bonding_masters_mtu
+        operstate: bonding_masters_operstate
+        rxBytes: bonding_masters_rxBytes
+        rxDropped: bonding_masters_rxDropped
+        rxErrors: bonding_masters_rxErrors
+        rxPackets: bonding_masters_rxPackets
+        speed: bonding_masters_speed
+        txBytes: bonding_masters_txBytes
+        txDropped: bonding_masters_txDropped
+        txErrors: bonding_masters_txErrors
+        txPackets: bonding_masters_txPackets
+      tag: bonding_masters
+      templateName: NetworkInterface
     eno1:
       deviceId: network
       id: eno1
