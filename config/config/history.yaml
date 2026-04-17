@@ -1,0 +1,11 @@
+apiVersion: tentacle.joyautomation.com/v1
+kind: ModuleConfig
+metadata:
+  name: history
+spec:
+  values:
+    HISTORY_DB_HOST: localhost
+    HISTORY_DB_NAME: tentacle
+    HISTORY_DB_PASSWORD: <secret>
+    HISTORY_DB_PORT: "5432"
+    HISTORY_DB_USER: postgres
