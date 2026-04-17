@@ -45,6 +45,8 @@ spec:
         - name: AI
           datatype: number
           defaultDeadband:
+            maxTime: 30000
+            minTime: 2500
             value: 10
         - name: SIGNALFAIL
           datatype: boolean
