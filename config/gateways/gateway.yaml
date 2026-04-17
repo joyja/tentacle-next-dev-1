@@ -44,6 +44,8 @@ spec:
           datatype: boolean
         - name: AI
           datatype: number
+          defaultDeadband:
+            value: 10
         - name: SIGNALFAIL
           datatype: boolean
         - name: OVERRANGE
