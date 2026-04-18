@@ -144,6 +144,7 @@ spec:
   udtVariables:
     RTU45_RECLM_PIT_001:
       deviceId: client4
+      historyEnabled: true
       id: RTU45_RECLM_PIT_001
       memberCipTypes:
         AI: REAL
