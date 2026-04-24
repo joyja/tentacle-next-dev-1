@@ -3,5 +3,5 @@ kind: Service
 metadata:
   name: gitops
 spec:
-  running: false
+  running: true
   version: latest
