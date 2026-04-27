@@ -38,78 +38,16 @@ spec:
     Analog_Input:
       name: Analog_Input
       members:
-        - name: EnableIn
-          datatype: boolean
-        - name: EnableOut
-          datatype: boolean
-        - name: AI
-          datatype: number
-          defaultDeadband:
-            maxTime: 30000
-            minTime: 2500
-            value: 10
-        - name: SIGNALFAIL
-          datatype: boolean
-        - name: OVERRANGE
-          datatype: boolean
-        - name: UNDERRANGE
-          datatype: boolean
-        - name: SIMULATE
-          datatype: boolean
         - name: RAWMIN
           datatype: number
         - name: RAWMAX
           datatype: number
-        - name: LOWSCL
-          datatype: number
-        - name: HIGHSCL
-          datatype: number
-        - name: SIMVALUE
-          datatype: number
-        - name: ALMENB
-          datatype: boolean
-        - name: HHENB
-          datatype: boolean
         - name: HHSP
           datatype: number
-        - name: HENB
-          datatype: boolean
-        - name: HSP
-          datatype: number
-        - name: LENB
-          datatype: boolean
         - name: LSP
-          datatype: number
-        - name: LLENB
-          datatype: boolean
-        - name: LLSP
-          datatype: number
-        - name: LOLENB
-          datatype: boolean
-        - name: LOLSP
-          datatype: number
-        - name: ALMDLY
-          datatype: number
-        - name: DB
           datatype: number
         - name: VALUE
           datatype: number
-        - name: HH
-          datatype: boolean
-        - name: H
-          datatype: boolean
-        - name: L
-          datatype: boolean
-        - name: LL
-          datatype: boolean
-        - name: LOS
-          datatype: boolean
-        - name: OOR
-          datatype: boolean
-        - name: los_oneshot
-          datatype: boolean
-        - name: oor_oneshot
-          datatype: boolean
       version: "1.0"
     NetworkInterface:
       name: NetworkInterface
@@ -147,75 +85,17 @@ spec:
       historyEnabled: true
       id: RTU45_RECLM_PIT_001
       memberCipTypes:
-        AI: REAL
-        ALMDLY: INT
-        ALMENB: BOOL
-        DB: REAL
-        EnableIn: BOOL
-        EnableOut: BOOL
-        H: BOOL
-        HENB: BOOL
-        HH: BOOL
-        HHENB: BOOL
         HHSP: REAL
-        HIGHSCL: REAL
-        HSP: REAL
-        L: BOOL
-        LENB: BOOL
-        LL: BOOL
-        LLENB: BOOL
-        LLSP: REAL
-        LOLENB: BOOL
-        LOLSP: REAL
-        LOS: BOOL
-        LOWSCL: REAL
         LSP: REAL
-        OOR: BOOL
-        OVERRANGE: BOOL
         RAWMAX: REAL
         RAWMIN: REAL
-        SIGNALFAIL: BOOL
-        SIMULATE: BOOL
-        SIMVALUE: REAL
-        UNDERRANGE: BOOL
         VALUE: REAL
-        los_oneshot: BOOL
-        oor_oneshot: BOOL
       memberTags:
-        AI: RTU45_RECLM_PIT_001.AI
-        ALMDLY: RTU45_RECLM_PIT_001.ALMDLY
-        ALMENB: RTU45_RECLM_PIT_001.ALMENB
-        DB: RTU45_RECLM_PIT_001.DB
-        EnableIn: RTU45_RECLM_PIT_001.EnableIn
-        EnableOut: RTU45_RECLM_PIT_001.EnableOut
-        H: RTU45_RECLM_PIT_001.H
-        HENB: RTU45_RECLM_PIT_001.HENB
-        HH: RTU45_RECLM_PIT_001.HH
-        HHENB: RTU45_RECLM_PIT_001.HHENB
         HHSP: RTU45_RECLM_PIT_001.HHSP
-        HIGHSCL: RTU45_RECLM_PIT_001.HIGHSCL
-        HSP: RTU45_RECLM_PIT_001.HSP
-        L: RTU45_RECLM_PIT_001.L
-        LENB: RTU45_RECLM_PIT_001.LENB
-        LL: RTU45_RECLM_PIT_001.LL
-        LLENB: RTU45_RECLM_PIT_001.LLENB
-        LLSP: RTU45_RECLM_PIT_001.LLSP
-        LOLENB: RTU45_RECLM_PIT_001.LOLENB
-        LOLSP: RTU45_RECLM_PIT_001.LOLSP
-        LOS: RTU45_RECLM_PIT_001.LOS
-        LOWSCL: RTU45_RECLM_PIT_001.LOWSCL
         LSP: RTU45_RECLM_PIT_001.LSP
-        OOR: RTU45_RECLM_PIT_001.OOR
-        OVERRANGE: RTU45_RECLM_PIT_001.OVERRANGE
         RAWMAX: RTU45_RECLM_PIT_001.RAWMAX
         RAWMIN: RTU45_RECLM_PIT_001.RAWMIN
-        SIGNALFAIL: RTU45_RECLM_PIT_001.SIGNALFAIL
-        SIMULATE: RTU45_RECLM_PIT_001.SIMULATE
-        SIMVALUE: RTU45_RECLM_PIT_001.SIMVALUE
-        UNDERRANGE: RTU45_RECLM_PIT_001.UNDERRANGE
         VALUE: RTU45_RECLM_PIT_001.VALUE
-        los_oneshot: RTU45_RECLM_PIT_001.los_oneshot
-        oor_oneshot: RTU45_RECLM_PIT_001.oor_oneshot
       tag: RTU45_RECLM_PIT_001
       templateName: Analog_Input
     bonding_masters:
